@@ -311,6 +311,8 @@ Full-Width Styles
   font-size: 42px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
+  height: 95px;
+  margin-top: -55px;
 }
 
 #project_tagline {

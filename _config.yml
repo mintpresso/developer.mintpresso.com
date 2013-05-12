@@ -1,0 +1,6 @@
+# overrides from Github
+# safe: true
+# source: <your pages repository>
+# destination: <the build dir>
+# lsi: false
+# pygments: true
