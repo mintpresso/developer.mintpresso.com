@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Affogato (MINTPRESSO API for Scala)
 ---
 
