@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Affogato (MINTPRESSO API for Scala)
+title: "Affogato (MINTPRESSO API for Scala)"
 ---
 
 [List of Documents](/index.html) &lt; [Affogato (MINTPRESSO API for Scala)](/affogato.html)
