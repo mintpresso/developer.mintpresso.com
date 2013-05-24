@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Affogato (MINTPRESSO API for Scala)
+page.subtitle: Affogato
 ---
 
-# Affogato
 ## MINTPRESSO API for Scala
 It supports basic graph manipulation and data querying for MINTPRESSO Data Cloud.
 

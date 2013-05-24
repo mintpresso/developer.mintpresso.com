@@ -1,6 +1,7 @@
 ---
 layout: default
 title: List of Documents
+page.subtitle: Examples, User guide &amp; API documentation.
 ---
 
 [Affogato: MINTPRESSO API for Scala](/affogato.html)
