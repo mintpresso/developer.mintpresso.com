@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Affogato (MINTPRESSO API for Scala)
-subtitle: Affogato
 ---
+
+[List of Documents](/) &lt; [{{ page.title }}]({{ page.url }})
 
 ## MINTPRESSO API for Scala
 It supports basic graph manipulation and data querying for MINTPRESSO Data Cloud.
