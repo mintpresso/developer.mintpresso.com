@@ -3,7 +3,7 @@ layout: default
 title: "Affogato (MINTPRESSO API for Scala)"
 ---
 
-[List of Documents](/index.html) &lt; [Affogato (MINTPRESSO API for Scala)](/affogato.html)
+[List of Documents](/) &lt; 
 
 ## MINTPRESSO API for Scala
 It supports basic graph manipulation and data querying for MINTPRESSO Data Cloud.
