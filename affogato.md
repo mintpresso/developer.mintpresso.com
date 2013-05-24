@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Affogato (MINTPRESSO API for Scala)
-page.subtitle: Affogato
+subtitle: Affogato
 ---
 
 ## MINTPRESSO API for Scala
