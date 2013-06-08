@@ -24,7 +24,7 @@ object MyBuild extends Build {
 
 Now you can use **Affogato** by adding it to Project dependencies.
 {% highlight scala %}
-"com.mintpresso" %% "mintpresso" % "0.1.9"
+"com.mintpresso" %% "mintpresso" % "0.2.2"
 {% endhighlight %}
 
 
@@ -32,7 +32,7 @@ If you're using Play Framework 2, edit `project/Build.scala`.
 {% highlight scala %}
   val appDependencies = Seq(
     // Add your project dependencies here
-    "com.mintpresso" %% "mintpresso" % "0.1.9"
+    "com.mintpresso" %% "mintpresso" % "0.2.2"
   )
 
 

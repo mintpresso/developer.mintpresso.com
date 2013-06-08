@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ResultSet - com.mintpresso.ResultSet</title>
-          <meta name="description" content="ResultSet - com.mintpresso.ResultSet" />
-          <meta name="keywords" content="ResultSet com.mintpresso.ResultSet" />
+          <title>AffogatoResult - com.mintpresso.AffogatoResult</title>
+          <meta name="description" content="AffogatoResult - com.mintpresso.AffogatoResult" />
+          <meta name="keywords" content="AffogatoResult com.mintpresso.AffogatoResult" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -17,7 +17,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
-            var hash = 'com.mintpresso.ResultSet';
+            var hash = 'com.mintpresso.AffogatoResult';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -31,7 +31,7 @@
       <div id="definition">
         <img src="../../lib/class_big.png" />
         <p id="owner"><a href="../package.html" class="extype" name="com">com</a>.<a href="package.html" class="extype" name="com.mintpresso">mintpresso</a></p>
-        <h1>ResultSet</h1>
+        <h1>AffogatoResult</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -40,11 +40,18 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">ResultSet</span><span class="params">(<span name="result">result: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">AffogatoResult</span><span class="params">(<span name="result">result: <span class="extype" name="scala.Either">Either</span>[<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, _]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Result class that can contain Eitner[Respond, Any].</p><pre>scala&gt; <span class="kw">val</span> a = AffogatoResult(Right(Point(...)))
+a: AffogatoResult = AffogatoResult(Right(Point(...)))
+
+scala&gt; a.as[Point]
+Point = Point(...)
+
+scala&gt; a.fold(e <span class="kw">=&gt;</span> println(e), (s: Point) <span class="kw">=&gt;</span> println(s))
+Point(...)</pre></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -64,7 +71,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.mintpresso.ResultSet"><span>ResultSet</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.mintpresso.AffogatoResult"><span>AffogatoResult</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -84,16 +91,16 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="com.mintpresso.ResultSet#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(result:Any):com.mintpresso.ResultSet"></a>
-      <a id="&lt;init&gt;:ResultSet"></a>
+              <ol><li name="com.mintpresso.AffogatoResult#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(result:Either[com.mintpresso.Respond,_]):com.mintpresso.AffogatoResult"></a>
+      <a id="&lt;init&gt;:AffogatoResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ResultSet</span><span class="params">(<span name="result">result: <span class="extype" name="scala.Any">Any</span></span>)</span>
+        <span class="name">AffogatoResult</span><span class="params">(<span name="result">result: <span class="extype" name="scala.Either">Either</span>[<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, _]</span>)</span>
       </span>
       </h4>
       
@@ -171,7 +178,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.mintpresso.ResultSet#as" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.mintpresso.AffogatoResult#as" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="as[T]:T"></a>
       <a id="as[T]:T"></a>
       <h4 class="signature">
@@ -180,10 +187,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">as</span><span class="tparams">[<span name="T">T</span>]</span><span class="result">: <span class="extype" name="com.mintpresso.ResultSet.as.T">T</span></span>
+        <span class="name">as</span><span class="tparams">[<span name="T">T</span>]</span><span class="result">: <span class="extype" name="com.mintpresso.AffogatoResult.as.T">T</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Return result as a instance of type T.</p><div class="fullcomment"><div class="comment cmt"><p>Return result as a instance of type T. if result is not Right(d: T), then it will throw <a href="AffogatoConversionException.html" class="extype" name="com.mintpresso.AffogatoConversionException">com.mintpresso.AffogatoConversionException</a>.
+ and it can throw <span class="extype" name="java.lang.ClassCastException">java.lang.ClassCastException</span> when type T is inappropriate for result.</p><pre>scala&gt; a.as[Point]
+Point = Point(...)
+
+scala&gt; a.as[<span class="std">Boolean</span>]
+java.lang.ClassCastException: Either[Respond, Point] cannot be cast to java.lang.<span class="std">Boolean</span></pre></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -242,6 +254,26 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="com.mintpresso.AffogatoResult#fold" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fold[R,T](err:com.mintpresso.Respond=&gt;R,success:T=&gt;R):R"></a>
+      <a id="fold[R,T]((Respond)⇒R,(T)⇒R):R"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fold</span><span class="tparams">[<span name="R">R</span>, <span name="T">T</span>]</span><span class="params">(<span name="err">err: (<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>) ⇒ <span class="extype" name="com.mintpresso.AffogatoResult.fold.R">R</span></span>, <span name="success">success: (<span class="extype" name="com.mintpresso.AffogatoResult.fold.T">T</span>) ⇒ <span class="extype" name="com.mintpresso.AffogatoResult.fold.R">R</span></span>)</span><span class="result">: <span class="extype" name="com.mintpresso.AffogatoResult.fold.R">R</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Handling Error or Success of AffogatoResult.</p><div class="fullcomment"><div class="comment cmt"><p>Handling Error or Success of AffogatoResult. (Respond =&gt; R) will call when request fail.</p><pre>scala&gt; a.fold(e <span class="kw">=&gt;</span> println(e), (s: Point) <span class="kw">=&gt;</span> println(s))
+Point(...)
+
+scala&gt; <span class="kw">val</span> b = AffogatoResult(Left(<span class="kw">new</span> Respond(<span class="num">500</span>, <span class="lit">"some problem occured"</span>)))
+b: AffogatoResult = AffogatoResult(Left(Respond(...)))
+
+scala&gt; b.fold(e <span class="kw">=&gt;</span> println(e.code, e.message), (s: Point) <span class="kw">=&gt;</span> println(s))
+(<span class="num">500</span>, some problem occured)</pre></div></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -307,16 +339,16 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.mintpresso.ResultSet#result" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="result:Any"></a>
-      <a id="result:Any"></a>
+    </li><li name="com.mintpresso.AffogatoResult#result" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="result:Either[com.mintpresso.Respond,_]"></a>
+      <a id="result:Either[Respond,_]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">result</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+        <span class="name">result</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, _]</span>
       </span>
       </h4>
       

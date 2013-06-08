@@ -40,15 +40,15 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Edge</span><span class="params">(<span name="subject">subject: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="verb">verb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="_object">_object: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="url">url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="createdAt">createdAt: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">Edge</span><span class="params">(<span name="subject">subject: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="verb">verb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="_object">_object: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="len">len: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="url">url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="createdAt">createdAt: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result"> extends <a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represent a mintpresso edge. edge define realation between a points.
 </p></div><dl class="paramcmts block"><dt class="param">subject</dt><dd class="cmt"><p>a subject point.</p></dd><dt class="param">verb</dt><dd class="cmt"><p>describe about relation between subject point
-            and object point. (eg. person <code>listen</code> music)</p></dd><dt class="param">_object</dt><dd class="cmt"><p>a object point.</p></dd><dt class="param">url</dt><dd class="cmt"><p>created time, unix timestamp</p></dd></dl><div class="toggleContainer block">
+            and object point. (eg. person <code>listen</code> music)</p></dd><dt class="param">_object</dt><dd class="cmt"><p>a object point.</p></dd><dt class="param">len</dt><dd class="cmt"><p>length of edge</p></dd><dt class="param">url</dt><dd class="cmt"><p>a edge url</p></dd><dt class="param">createdAt</dt><dd class="cmt"><p>created time, unix timestamp</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -66,7 +66,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.mintpresso.Edge"><span>Edge</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.mintpresso.Edge"><span>Edge</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="com.mintpresso.Respond"><span>Respond</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -87,7 +87,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.mintpresso.Edge#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(subject:com.mintpresso.Point,verb:String,_object:com.mintpresso.Point,url:String,createdAt:BigInt):com.mintpresso.Edge"></a>
+      <a id="&lt;init&gt;(subject:com.mintpresso.Point,verb:String,_object:com.mintpresso.Point,len:BigInt,url:String,createdAt:BigInt):com.mintpresso.Edge"></a>
       <a id="&lt;init&gt;:Edge"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -95,11 +95,11 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Edge</span><span class="params">(<span name="subject">subject: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="verb">verb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="_object">_object: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="url">url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="createdAt">createdAt: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span>
+        <span class="name">Edge</span><span class="params">(<span name="subject">subject: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="verb">verb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="_object">_object: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="len">len: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="url">url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="createdAt">createdAt: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">subject</dt><dd class="cmt"><p>a subject point.</p></dd><dt class="param">verb</dt><dd class="cmt"><p>describe about relation between subject point
-            and object point. (eg. person <code>listen</code> music)</p></dd><dt class="param">_object</dt><dd class="cmt"><p>a object point.</p></dd><dt class="param">url</dt><dd class="cmt"><p>created time, unix timestamp</p></dd></dl></div>
+            and object point. (eg. person <code>listen</code> music)</p></dd><dt class="param">_object</dt><dd class="cmt"><p>a object point.</p></dd><dt class="param">len</dt><dd class="cmt"><p>length of edge</p></dd><dt class="param">url</dt><dd class="cmt"><p>a edge url</p></dd><dt class="param">createdAt</dt><dd class="cmt"><p>created time, unix timestamp</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -216,6 +216,19 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="com.mintpresso.Respond#code" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="code:BigInt"></a>
+      <a id="code:BigInt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">code</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a></dd></dl></div>
     </li><li name="com.mintpresso.Edge#createdAt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="createdAt:BigInt"></a>
       <a id="createdAt:BigInt"></a>
@@ -228,7 +241,7 @@
         <span class="name">createdAt</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">created time, unix timestamp</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -284,6 +297,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.mintpresso.Edge#len" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="len:BigInt"></a>
+      <a id="len:BigInt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">len</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">length of edge</p>
+    </li><li name="com.mintpresso.Respond#message" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="message:String"></a>
+      <a id="message:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">message</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -323,6 +362,22 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.mintpresso.Respond#setStatus" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setStatus(s:(BigInt,String)):Unit"></a>
+      <a id="setStatus((BigInt,String)):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setStatus</span><span class="params">(<span name="s">s: (<span class="extype" name="scala.BigInt">BigInt</span>, <span class="extype" name="scala.Predef.String">String</span>)</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Set status via functions</p><div class="fullcomment"><div class="comment cmt"><p>Set status via functions</p><pre>scala&gt; <span class="kw">val</span> r = <span class="kw">new</span> Respond()
+Respond = Respond
+
+scala&gt; r.setStatus((<span class="num">200</span>, <span class="lit">"complete"</span>))</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a></dd></dl></div>
     </li><li name="com.mintpresso.Edge#subject" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="subject:com.mintpresso.Point"></a>
       <a id="subject:Point"></a>
@@ -361,7 +416,7 @@
         <span class="name">url</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">created time, unix timestamp</p>
+      <p class="shortcomment cmt">a edge url</p>
     </li><li name="com.mintpresso.Edge#verb" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="verb:String"></a>
       <a id="verb:String"></a>
@@ -442,6 +497,8 @@
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="com.mintpresso.Respond">
+              <h3>Inherited from <a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
