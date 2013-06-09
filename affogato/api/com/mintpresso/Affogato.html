@@ -285,51 +285,76 @@ affogato: com.mintpresso.Affogato = com.mintpresso.Affogato</pre></div><dl class
               
         </dd></dl></div>
     </li><li name="com.mintpresso.Affogato#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="get(subjectId:Option[Long],subjectType:String,subjectIdentifier:String,verb:String,objectId:Option[Long],objectType:String,objectIdentifier:String):Option[List[com.mintpresso.Edge]]"></a>
-      <a id="get(Option[Long],String,String,String,Option[Long],String,String):Option[List[Edge]]"></a>
+      <a id="get[T](d:scala.collection.mutable.LinkedHashMap[T,String],getInnerPoints:Boolean):com.mintpresso.AffogatoResult"></a>
+      <a id="get[T](LinkedHashMap[T,String],Boolean):AffogatoResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">get</span><span class="params">(<span name="subjectId">subjectId: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>] = <span class="symbol">None</span></span>, <span name="subjectType">subjectType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="subjectIdentifier">subjectIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="verb">verb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectId">objectId: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>] = <span class="symbol">None</span></span>, <span name="objectType">objectType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectIdentifier">objectIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.List">List</span>[<a href="Edge.html" class="extype" name="com.mintpresso.Edge">Edge</a>]]</span>
+        <span class="name">get</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="d">d: <span class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</span>[<span class="extype" name="com.mintpresso.Affogato.get.T">T</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="getInnerPoints">getInnerPoints: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="AffogatoResult.html" class="extype" name="com.mintpresso.AffogatoResult">AffogatoResult</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get a point or Edge by LinkedHashMap[String, String] or LinkedHashMap[Symbol, String]
+</p><div class="fullcomment"><div class="comment cmt"><p>Get a point or Edge by LinkedHashMap[String, String] or LinkedHashMap[Symbol, String]
+</p></div><dl class="paramcmts block"><dt class="param">d</dt><dd class="cmt"><p>LinkedHashMap[T, String] data about Point or Edge.</p></dd><dt class="param">getInnerPoints</dt><dd class="cmt"><p>getInnerPoints flag.</p><pre>scala&gt; affogato.get(LinkedHashMap[<span class="std">String</span>, <span class="std">String</span>](
+         <span class="lit">"user"</span> -&gt; <span class="lit">"admire93"</span>
+       ))
+AffogatoResult[Either[Respond, Point]] = AffogatoResult[Either[Respond, Point]](Right[Point(...))
+
+scala&gt; affogato.get(LinkedHashMap[<span class="std">Symbol</span>, <span class="std">String</span>](
+         'user -&gt; <span class="lit">"admire93"</span>,
+         'verb -&gt; <span class="lit">"listen"</span>,
+         'music -&gt; <span class="lit">"bugs-1"</span>
+       ))
+AffogatoResult[Either[Respond, Edge]] = AffogatoResult[Either[Respond, Edge]](Right[Point(...))</pre></dd></dl></div>
+    </li><li name="com.mintpresso.Affogato#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="get(subjectId:Option[Long],subjectType:String,subjectIdentifier:String,verb:String,objectId:Option[Long],objectType:String,objectIdentifier:String,getInnerPoints:Boolean):Either[com.mintpresso.Respond,List[com.mintpresso.Edge]]"></a>
+      <a id="get(Option[Long],String,String,String,Option[Long],String,String,Boolean):Either[Respond,List[Edge]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get</span><span class="params">(<span name="subjectId">subjectId: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>] = <span class="symbol">None</span></span>, <span name="subjectType">subjectType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="subjectIdentifier">subjectIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="verb">verb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectId">objectId: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>] = <span class="symbol">None</span></span>, <span name="objectType">objectType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectIdentifier">objectIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="getInnerPoints">getInnerPoints: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, <span class="extype" name="scala.List">List</span>[<a href="Edge.html" class="extype" name="com.mintpresso.Edge">Edge</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get a edge from mintpresso
 </p><div class="fullcomment"><div class="comment cmt"><p>Get a edge from mintpresso
 </p></div><dl class="paramcmts block"><dt class="param">subjectId</dt><dd class="cmt"><p>id of subject point</p></dd><dt class="param">subjectType</dt><dd class="cmt"><p>type of subject point</p></dd><dt class="param">subjectIdentifier</dt><dd class="cmt"><p>identifier of subject point</p></dd><dt class="param">verb</dt><dd class="cmt"><p>describe about relation between subject point
-       and object point. (eg. person <code>listen</code> music)</p></dd><dt class="param">objectId</dt><dd class="cmt"><p>id of object point</p></dd><dt class="param">objectType</dt><dd class="cmt"><p>type of object point</p></dd><dt class="param">objectIdentifier</dt><dd class="cmt"><p>identifier of object point</p></dd><dt>returns</dt><dd class="cmt"><p>a value whether request is successfully ended or not</p></dd></dl></div>
+       and object point. (eg. person <code>listen</code> music)</p></dd><dt class="param">objectId</dt><dd class="cmt"><p>id of object point</p></dd><dt class="param">objectType</dt><dd class="cmt"><p>type of object point</p></dd><dt class="param">objectIdentifier</dt><dd class="cmt"><p>identifier of object point</p></dd><dt class="param">getInnerPoints</dt><dd class="cmt"><p>getInnerPoints flag. if flag is true, edge data filled with real Point data.</p></dd><dt>returns</dt><dd class="cmt"><p>Either[Respond, List[Edge]]</p></dd></dl></div>
     </li><li name="com.mintpresso.Affogato#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="get(_type:String,identifier:String):com.mintpresso.ResultSet"></a>
-      <a id="get(String,String):ResultSet"></a>
+      <a id="get(_type:String,identifier:String):Either[com.mintpresso.Respond,com.mintpresso.Point]"></a>
+      <a id="get(String,String):Either[Respond,Point]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">get</span><span class="params">(<span name="_type">_type: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="identifier">identifier: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="ResultSet.html" class="extype" name="com.mintpresso.ResultSet">ResultSet</a></span>
+        <span class="name">get</span><span class="params">(<span name="_type">_type: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="identifier">identifier: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get a point
 </p><div class="fullcomment"><div class="comment cmt"><p>Get a point
-</p></div><dl class="paramcmts block"><dt class="param">_type</dt><dd class="cmt"><p>type of point</p></dd><dt class="param">identifier</dt><dd class="cmt"><p>identifier of point</p></dd><dt>returns</dt><dd class="cmt"><p>a Option[point] if point is exist, Some(Point) will return.</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">_type</dt><dd class="cmt"><p>type of point</p></dd><dt class="param">identifier</dt><dd class="cmt"><p>identifier of point</p></dd><dt>returns</dt><dd class="cmt"><p>Either[Respond, Edge]</p></dd></dl></div>
     </li><li name="com.mintpresso.Affogato#get" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="get(id:Long):Option[com.mintpresso.Point]"></a>
-      <a id="get(Long):Option[Point]"></a>
+      <a id="get(id:Long):Either[com.mintpresso.Respond,com.mintpresso.Point]"></a>
+      <a id="get(Long):Either[Respond,Point]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">get</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a>]</span>
+        <span class="name">get</span><span class="params">(<span name="id">id: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get a point by id
 </p><div class="fullcomment"><div class="comment cmt"><p>Get a point by id
-</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>id of point</p></dd><dt>returns</dt><dd class="cmt"><p>a ResultSet if point is exist, ResultSet(Option[Point]) will return.</p></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>id of point</p></dd><dt>returns</dt><dd class="cmt"><p>Either[Respond, Point]</p></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -409,65 +434,82 @@ affogato: com.mintpresso.Affogato = com.mintpresso.Affogato</pre></div><dl class
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="com.mintpresso.Affogato#set" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="set(subjectType:String,subjectIdentifier:String,verb:String,objectType:String,objectIdentifier:String):Boolean"></a>
-      <a id="set(String,String,String,String,String):Boolean"></a>
+      <a id="set(subject:com.mintpresso.Point,verb:String,_object:com.mintpresso.Point):Either[com.mintpresso.Respond,com.mintpresso.Edge]"></a>
+      <a id="set(Point,String,Point):Either[Respond,Edge]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="subjectType">subjectType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="subjectIdentifier">subjectIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="verb">verb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectType">objectType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectIdentifier">objectIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">set</span><span class="params">(<span name="subject">subject: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="verb">verb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="_object">_object: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, <a href="Edge.html" class="extype" name="com.mintpresso.Edge">Edge</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Add a Edge to mintpresso by <a href="Point.html" class="extype" name="com.mintpresso.Point">com.mintpresso.Point</a></p><div class="fullcomment"><div class="comment cmt"><p>Add a Edge to mintpresso by <a href="Point.html" class="extype" name="com.mintpresso.Point">com.mintpresso.Point</a></p><pre>scala&gt; affogato.set(Point(...), <span class="lit">"like"</span>, Point(...))
+Either[Respond, Edge] = Right(Edge(...))</pre></div><dl class="paramcmts block"><dt class="param">subject</dt><dd class="cmt"><p><a href="Point.html" class="extype" name="com.mintpresso.Point">com.mintpresso.Point</a> that contains data about subject of realation</p></dd><dt class="param">verb</dt><dd class="cmt"><p>describe about relation between subject point and object point</p></dd><dt class="param">_object</dt><dd class="cmt"><p><a href="Point.html" class="extype" name="com.mintpresso.Point">com.mintpresso.Point</a> that contains data about object of realation</p></dd><dt>returns</dt><dd class="cmt"><p>Either[Respond, Edge]]</p></dd></dl></div>
+    </li><li name="com.mintpresso.Affogato#set" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="set(subjectType:String,subjectIdentifier:String,verb:String,objectType:String,objectIdentifier:String):Either[com.mintpresso.Respond,com.mintpresso.Edge]"></a>
+      <a id="set(String,String,String,String,String):Either[Respond,Edge]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">set</span><span class="params">(<span name="subjectType">subjectType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="subjectIdentifier">subjectIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="verb">verb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectType">objectType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="objectIdentifier">objectIdentifier: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, <a href="Edge.html" class="extype" name="com.mintpresso.Edge">Edge</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Add a Edge to mintpresso</p><div class="fullcomment"><div class="comment cmt"><p>Add a Edge to mintpresso</p><pre>scala&gt; affogato.set(<span class="lit">"user"</span>, <span class="lit">"admire9@gmail.com"</span>, <span class="lit">"listen"</span>, <span class="lit">"music"</span>, <span class="lit">"bugs-123"</span>)
-<span class="std">Option</span>[Edge] = <span class="std">Some</span>(Edge(...))</pre></div><dl class="paramcmts block"><dt class="param">subjectType</dt><dd class="cmt"><p>type of subject point</p></dd><dt class="param">subjectIdentifier</dt><dd class="cmt"><p>identifier of subject point</p></dd><dt class="param">verb</dt><dd class="cmt"><p>describe about relation between subject point
-       and object point. (eg. person <code>listen</code> music)</p></dd><dt class="param">objectType</dt><dd class="cmt"><p>type of object point</p></dd><dt class="param">objectIdentifier</dt><dd class="cmt"><p>identifier of object point</p></dd><dt>returns</dt><dd class="cmt"><p>a value whether request is successfully ended or not</p></dd></dl></div>
+Either[Respond, Edge] = Right(Edge(...))</pre></div><dl class="paramcmts block"><dt class="param">subjectType</dt><dd class="cmt"><p>type of subject point</p></dd><dt class="param">subjectIdentifier</dt><dd class="cmt"><p>identifier of subject point</p></dd><dt class="param">verb</dt><dd class="cmt"><p>describe about relation between subject point
+       and object point. (eg. person <code>listen</code> music)</p></dd><dt class="param">objectType</dt><dd class="cmt"><p>type of object point</p></dd><dt class="param">objectIdentifier</dt><dd class="cmt"><p>identifier of object point</p></dd><dt>returns</dt><dd class="cmt"><p>Either[Respond, Edge]</p></dd></dl></div>
     </li><li name="com.mintpresso.Affogato#set" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="set(point:com.mintpresso.Point):Option[com.mintpresso.Point]"></a>
-      <a id="set(Point):Option[Point]"></a>
+      <a id="set(point:com.mintpresso.Point):Either[com.mintpresso.Respond,com.mintpresso.Point]"></a>
+      <a id="set(Point):Either[Respond,Point]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="point">point: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a>]</span>
+        <span class="name">set</span><span class="params">(<span name="point">point: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Add a point to mintpresso</p><div class="fullcomment"><div class="comment cmt"><p>Add a point to mintpresso</p><pre>scala&gt; affogato.set(Point( ... ))
-<span class="std">Option</span>[Point] = <span class="std">Some</span>(Point(...))</pre></div><dl class="paramcmts block"><dt class="param">point</dt><dd class="cmt"><p><a href="Point.html" class="extype" name="com.mintpresso.Point">com.mintpresso.Point</a> instance</p></dd><dt>returns</dt><dd class="cmt"><p>a Option[Point]</p></dd></dl></div>
+      <p class="shortcomment cmt">Add a point to mintpresso by <a href="Point.html" class="extype" name="com.mintpresso.Point">com.mintpresso.Point</a></p><div class="fullcomment"><div class="comment cmt"><p>Add a point to mintpresso by <a href="Point.html" class="extype" name="com.mintpresso.Point">com.mintpresso.Point</a></p><pre>scala&gt; affogato.set(Point( ... ))
+Either[Respond, Point] = Right(Point(...))</pre></div><dl class="paramcmts block"><dt class="param">point</dt><dd class="cmt"><p><a href="Point.html" class="extype" name="com.mintpresso.Point">com.mintpresso.Point</a> instance</p></dd><dt>returns</dt><dd class="cmt"><p>Either[Respond, Point]</p></dd></dl></div>
     </li><li name="com.mintpresso.Affogato#set" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="set[T](d:Map[T,String]):com.mintpresso.ResultSet"></a>
-      <a id="set[T](Map[T,String]):ResultSet"></a>
+      <a id="set[T](d:scala.collection.mutable.LinkedHashMap[T,String],updateIfExists:Boolean):com.mintpresso.AffogatoResult"></a>
+      <a id="set[T](LinkedHashMap[T,String],Boolean):AffogatoResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="d">d: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="com.mintpresso.Affogato.set.T">T</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="ResultSet.html" class="extype" name="com.mintpresso.ResultSet">ResultSet</a></span>
+        <span class="name">set</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="d">d: <span class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</span>[<span class="extype" name="com.mintpresso.Affogato.set.T">T</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="updateIfExists">updateIfExists: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="AffogatoResult.html" class="extype" name="com.mintpresso.AffogatoResult">AffogatoResult</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Add a point to mintpresso</p><div class="fullcomment"><div class="comment cmt"><p>Add a point to mintpresso</p><pre>scala&gt; affogato.set(<span class="std">Map</span>[<span class="std">String</span>, <span class="std">String</span>](<span class="lit">"user"</span> -&gt; <span class="lit">"admire9@gmail.com"</span>, <span class="lit">"name"</span> -&gt; <span class="lit">"kanghyojun"</span>))
-<span class="std">Option</span>[Point] = <span class="std">Some</span>(Point(...))
+      <p class="shortcomment cmt">Add a point or Edge</p><div class="fullcomment"><div class="comment cmt"><p>Add a point or Edge</p><pre>scala&gt; <span class="kw">import</span> scala.collection.mutable.LinkedHashMap
+scala.collection.mutable.LinkedHashMap
 
-scala&gt; affogato.set(<span class="std">Map</span>[<span class="std">String</span>, <span class="std">String</span>]('user -&gt; <span class="lit">"admire93@gmail.com"</span>, 'name -&gt; <span class="lit">"kanghyojun"</span>))
-<span class="std">Option</span>[Point] = <span class="std">Some</span>(Point(...))</pre></div><dl class="paramcmts block"><dt class="param">d</dt><dd class="cmt"><p>information of point</p></dd><dt>returns</dt><dd class="cmt"><p>a Option[Point]</p></dd></dl></div>
+scala&gt; affogato.set(LinkedHashMap[<span class="std">String</span>, <span class="std">String</span>](<span class="lit">"user"</span> -&gt; <span class="lit">"admire9@gmail.com"</span>, <span class="lit">"name"</span> -&gt; <span class="lit">"kanghyojun"</span>))
+AffogatoResult = AffogatoResult(Point(...))
+
+scala&gt; affogato.set(<span class="std">Map</span>[<span class="std">Symbol</span>, <span class="std">String</span>]('user -&gt; <span class="lit">"admire93@gmail.com"</span>, 'verb -&gt; <span class="lit">"like"</span>, 'post -&gt; <span class="lit">"some-post"</span>))
+AffogatoResult = AffogatoResult(Edge(...))</pre></div><dl class="paramcmts block"><dt class="param">d</dt><dd class="cmt"><p>LinkedHashMap contain information of mintpresso data.</p></dd><dt>returns</dt><dd class="cmt"><p>AffogatoResult(Point(...)) or AffogatoResult(Edge(...))</p></dd></dl></div>
     </li><li name="com.mintpresso.Affogato#set" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="set(_type:String,identifier:String,data:String):Option[com.mintpresso.Point]"></a>
-      <a id="set(String,String,String):Option[Point]"></a>
+      <a id="set(_type:String,identifier:String,data:String,updateIfExists:Boolean):Either[com.mintpresso.Respond,com.mintpresso.Point]"></a>
+      <a id="set(String,String,String,Boolean):Either[Respond,Point]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">set</span><span class="params">(<span name="_type">_type: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="identifier">identifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="data">data: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;{}&quot;</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a>]</span>
+        <span class="name">set</span><span class="params">(<span name="_type">_type: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="identifier">identifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="data">data: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;{}&quot;</span></span>, <span name="updateIfExists">updateIfExists: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Add a point to mintpresso</p><div class="fullcomment"><div class="comment cmt"><p>Add a point to mintpresso</p><pre>scala&gt; affogato.set(<span class="lit">"user"</span>, <span class="lit">"admire9@gmail.com"</span>)
-<span class="std">Option</span>[Point] = <span class="std">Some</span>(Point(...))</pre></div><dl class="paramcmts block"><dt class="param">_type</dt><dd class="cmt"><p>type of point</p></dd><dt class="param">identifier</dt><dd class="cmt"><p>identifier of point</p></dd><dt class="param">data</dt><dd class="cmt"><p>additional data of point</p></dd><dt>returns</dt><dd class="cmt"><p>a Option[Point] if request goes success, it will return Some(Point)</p></dd></dl></div>
+      <p class="shortcomment cmt">Add a point to mintpresso</p><div class="fullcomment"><div class="comment cmt"><p>Add a point to mintpresso</p><pre>scala&gt; <span class="kw">val</span> c = affogato.set(<span class="lit">"user"</span>, <span class="lit">"admire9@gmail.com"</span>)
+c: Either[Respond, Point] = Right(Point(...))</pre></div><dl class="paramcmts block"><dt class="param">_type</dt><dd class="cmt"><p>type of point</p></dd><dt class="param">identifier</dt><dd class="cmt"><p>identifier of point</p></dd><dt class="param">data</dt><dd class="cmt"><p>additional data of point</p></dd><dt class="param">updateIfExists</dt><dd class="cmt"><p>updateIfExists flag. FYI, reference mintpresso document.</p></dd><dt>returns</dt><dd class="cmt"><p>a Either[Respond, Point]</p></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -481,21 +523,21 @@ scala&gt; affogato.set(<span class="std">Map</span>[<span class="std">String</sp
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.mintpresso.Affogato#tToMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="tToMap[T](m:Map[T,String]):Map[String,String]"></a>
-      <a id="tToMap[T](Map[T,String]):Map[String,String]"></a>
+    </li><li name="com.mintpresso.Affogato#tToStringMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tToStringMap[T](m:scala.collection.mutable.LinkedHashMap[T,String]):scala.collection.mutable.LinkedHashMap[String,String]"></a>
+      <a id="tToStringMap[T](LinkedHashMap[T,String]):LinkedHashMap[String,String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">tToMap</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="com.mintpresso.Affogato.tToMap.T">T</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">tToStringMap</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="m">m: <span class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</span>[<span class="extype" name="com.mintpresso.Affogato.tToStringMap.T">T</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Convert Map[T, String] to Map[String, String] for syntax sugar
-</p><div class="fullcomment"><div class="comment cmt"><p>Convert Map[T, String] to Map[String, String] for syntax sugar
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a Map[String, String]</p></dd></dl></div>
+      <p class="shortcomment cmt">Convert LinkedHashMap[T, String] to Map[String, String] for syntax sugar
+</p><div class="fullcomment"><div class="comment cmt"><p>Convert LinkedHashMap[T, String] to Map[String, String] for syntax sugar
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a LinkedHashMap[String, String]</p></dd></dl></div>
     </li><li name="com.mintpresso.Affogato#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>

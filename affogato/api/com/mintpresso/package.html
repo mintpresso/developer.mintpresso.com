@@ -76,6 +76,19 @@
       </span>
       </h4>
       <p class="comment cmt">Affogato class</p>
+    </li><li name="com.mintpresso.AffogatoConversionException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AffogatoConversionExceptionextendsException"></a>
+      <a id="AffogatoConversionException:AffogatoConversionException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AffogatoConversionException.html"><span class="name">AffogatoConversionException</span></a><span class="result"> extends <span class="extype" name="java.lang.Exception">Exception</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt"> Conversion Exception class.</p>
     </li><li name="com.mintpresso.AffogatoInvalidJsonException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="AffogatoInvalidJsonExceptionextendsException"></a>
       <a id="AffogatoInvalidJsonException:AffogatoInvalidJsonException"></a>
@@ -89,8 +102,21 @@
       </span>
       </h4>
       <p class="comment cmt">Invalid Json Exception Class</p>
+    </li><li name="com.mintpresso.AffogatoResult" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AffogatoResultextendsProductwithSerializable"></a>
+      <a id="AffogatoResult:AffogatoResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AffogatoResult.html"><span class="name">AffogatoResult</span></a><span class="params">(<span name="result">result: <span class="extype" name="scala.Either">Either</span>[<a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a>, _]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Result class that can contain Eitner[Respond, Any].</p>
     </li><li name="com.mintpresso.Edge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="EdgeextendsProductwithSerializable"></a>
+      <a id="EdgeextendsRespondwithProductwithSerializable"></a>
       <a id="Edge:Edge"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -98,12 +124,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Edge.html"><span class="name">Edge</span></a><span class="params">(<span name="subject">subject: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="verb">verb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="_object">_object: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="url">url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="createdAt">createdAt: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Edge.html"><span class="name">Edge</span></a><span class="params">(<span name="subject">subject: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="verb">verb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="_object">_object: <a href="Point.html" class="extype" name="com.mintpresso.Point">Point</a></span>, <span name="len">len: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="url">url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="createdAt">createdAt: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result"> extends <a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Represent a mintpresso edge.</p>
     </li><li name="com.mintpresso.Point" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="PointextendsProductwithSerializable"></a>
+      <a id="PointextendsRespondwithProductwithSerializable"></a>
       <a id="Point:Point"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -111,23 +137,23 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Point.html"><span class="name">Point</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Long">Long</span></span>, <span name="_type">_type: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="identifier">identifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="data">data: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="_url">_url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="createdAt">createdAt: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="updatedAt">updatedAt: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="referencedAt">referencedAt: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Point.html"><span class="name">Point</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="_type">_type: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="identifier">identifier: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="data">data: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="_url">_url: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="createdAt">createdAt: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="updatedAt">updatedAt: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="referencedAt">referencedAt: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result"> extends <a href="Respond.html" class="extype" name="com.mintpresso.Respond">Respond</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">Represent a mintpresso point.</p>
-    </li><li name="com.mintpresso.ResultSet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ResultSetextendsProductwithSerializable"></a>
-      <a id="ResultSet:ResultSet"></a>
+    </li><li name="com.mintpresso.Respond" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RespondextendsObject"></a>
+      <a id="Respond:Respond"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ResultSet.html"><span class="name">ResultSet</span></a><span class="params">(<span name="result">result: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Respond.html"><span class="name">Respond</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Base class of mintpresso response.</p>
     </li></ol>
             </div>
 
